@@ -142,24 +142,24 @@ function promptRemoveGit(libraryName) {
             console.log(colors.red(rmItems.join("\n")));
         
             console.log("\n");
+        }
             
             
-            console.log(colors.cyan("\nThanks for the info. The last few changes are being made... hang tight!\n\n"));
+        console.log(colors.cyan("\nThanks for the info. The last few changes are being made... hang tight!\n\n"));
 
         // Get the Git username and email before the .git directory is removed
-            let username = exec("git config user.name").stdout.trim();
-            let usermail = exec("git config user.email").stdout.trim();
-        
-            removeItems();
-        
-            modifyContents(libraryName, username, usermail);
-        
-            renameItems(libraryName);
-        
-            finalize();
-        
-            console.log(colors.cyan("OK, you're all set. Happy coding!! ;)\n"));
-        }
+        let username = exec("git config user.name").stdout.trim();
+        let usermail = exec("git config user.email").stdout.trim();
+
+        removeItems();
+
+        modifyContents(libraryName, username, usermail);
+
+        renameItems(libraryName);
+
+        finalize();
+
+        console.log(colors.cyan("OK, you're all set. Happy coding!! ;)\n"));
     })
 }
 
