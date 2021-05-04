@@ -26,7 +26,7 @@
         "type-check": "tsc --noEmit",
         "type-check:watch": "npm run type-check -- --watch",
         "build": "tsc && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
-        "build:watch": "rollup -c rollup.config.ts --output ../client/public/lib/game-platform.js -w",
+        "build:watch": "rollup -c rollup.config.ts -w",
         "start": "run-p type-check:watch build:watch",
         "test": "jest --coverage",
         "test:watch": "jest --coverage --watch",
