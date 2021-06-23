@@ -20,7 +20,7 @@
         "node": ">=6.0.0"
     },
     "scripts": {
-        "clean": "npx del-cli dist --force ",
+        "clean": "npx rimraf dist",
         "prebuild": "npm run clean",
         "prepublishOnly": "npm run build",
         "type-check": "tsc --noEmit",
